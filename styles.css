@@ -1,0 +1,126 @@
+:root {
+  --main-dark: #1f1f1f;
+  --default-color: #22262c;
+  --secound-color: #fff;
+  --borders-color: #000;
+  --characters-color: #fff;
+  --operators-color: #ff8c00;
+  --dels-color: #ff4700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  color: var(--characters-color);
+  font-family: sans-serif;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 5% 0;
+  background-color: var(--main-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 50%;
+  height: 100%;
+  border: 2px solid var(--borders-color);
+  border-radius: 10px;
+  background-color: var(--secound-color);
+  box-shadow: 0px -5px 0px 0px hsla(0, 0%, 0%, 0.18) inset;
+}
+
+#calculator .camp-view {
+  position: relative;
+  width: 100%;
+  border: 2px solid var(--borders-color);
+  box-shadow: 0px -5px 0px 0px hsla(0, 0%, 0%, 0.18) inset;
+  border-radius: 10px;
+  background-color: var(--default-color);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+#calculator #view {
+  padding: 0 1rem;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  direction: ltr;
+  float: right;
+  white-space: nowrap;
+}
+
+#calculator .buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  border: 2px solid var(--borders-color);
+  border-radius: 10px;
+  box-shadow: 0px -5px 0px 0px hsla(0, 0%, 0%, 0.18) inset;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  filter: brightness(1.15);
+}
+
+button:active {
+  filter: brightness(0.85);
+}
+
+button.number {
+  background-color: var(--default-color);
+}
+
+button.operator {
+  background-color: var(--operators-color);
+}
+
+button.clear {
+  background-color: var(--dels-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.clear svg {
+  width: 2rem;
+}
+
+button.backspace {
+  background-color: var(--dels-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.backspace svg {
+  width: 4rem;
+}
+
+button.zero {
+  grid-column: 1 / 3;
+}
