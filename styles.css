@@ -132,14 +132,11 @@ button.zero {
 
 @media (max-width: 830px) {
   #calculator {
-    width: 60%;
+    width: 70%;
   }
 }
 
 @media (max-width: 630px) {
-  #calculator {
-    width: 70%;
-  }
   #calculator #view {
     font-size: 2rem;
   }
@@ -151,5 +148,15 @@ button.zero {
   }
   button.clear svg {
     width: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #calculator {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  #calculator .buttons {
+    gap: 0.6rem
   }
 }
